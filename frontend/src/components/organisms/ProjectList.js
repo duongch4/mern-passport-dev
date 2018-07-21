@@ -86,8 +86,8 @@ class ProjectList extends Component {
                     </div>
                     <div className="text-center">
                         {(partial) ? 
-                            (<Button label="All projects" redirect="/project/view/"/>) :
-                            (<Button label="Back to main" redirect="/" />)
+                            (<Button label="All Movies" redirect="/project/view/"/>) :
+                            (<Button label="To Main" redirect="/" />)
                         }
                     </div>
                 </div>
