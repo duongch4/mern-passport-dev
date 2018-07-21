@@ -137,9 +137,9 @@ class ProjectEdit extends Component {
       } else {
         let inputFields = [
           {
-            label: 'Project Title',
+            label: 'Movie Title',
             name: 'title',
-            placeholder: 'e.g. the Ninja project',
+            placeholder: 'e.g. Batman',
             value: this.state.title,
             required: true
           },
@@ -147,43 +147,43 @@ class ProjectEdit extends Component {
             label: 'Categories',
             name: 'categories',
             type: 'text',
-            placeholder: 'e.g. Social, Games, Productivity, etc.',
+            placeholder: 'e.g. Horror, Romance, Comedy, etc.',
             value: this.state.categories
           },
           {
             label: 'Description',
             tag: 'textarea',
             name: 'description',
-            placeholder: 'e.g. This is the coolest project ever',
+            placeholder: 'e.g. IT tells a story about a "clown"',
             value: this.state.description,
             required: true
           },
           {
-            label: 'Project Status',
+            label: 'Review Status',
             tag: 'textarea',
             name: 'status',
-            placeholder: 'e.g. Explain what is the current state of the project, why you need help and what roles you might need',
+            placeholder: 'e.g. This is the coolest movie ever',
             value: this.state.status,
             required: true
           },
           {
-            label: 'Stack',
+            label: 'Key',
             name: 'stack',
             type: 'text',
-            placeholder: 'Languages, frameworks, libraries... separate by comma',
+            placeholder: 'sad, happy, wedding... separate by comma',
             value: this.state.stack
           },
           {
-            label: 'Code Repository',
+            label: 'Movie IMDB',
             name: 'repoUrl',
-            placeholder: 'http://github.com/username/github-repo',
+            placeholder: 'https://www.imdb.com/title/tt4786282/?ref_=rvi_tt',
             value: this.state.repoUrl,
             required: true
           },
           {
             label: 'Screenshots URL',
             name: 'img',
-            placeholder: 'e.g. http://via.placeholder.com/400x300',
+            placeholder: 'e.g. https://www.imdb.com/title/tt4786282/mediaviewer/rm100620544',
             value: this.state.img
           }
         ];
@@ -192,7 +192,7 @@ class ProjectEdit extends Component {
             <div className="row">
               <div className="col">
                 <div className="material-card">
-                <h1>{(this.props.match.params.id) ? 'Edit a Project' : 'Create New Project'}</h1>
+                <h1>{(this.props.match.params.id) ? 'Edit a Project' : 'Create New Movie'}</h1>
                   <form onSubmit={this.onFormSubmit}>
                     <fieldset>
                       {inputFields.map(item => {
