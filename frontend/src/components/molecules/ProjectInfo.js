@@ -139,17 +139,17 @@ class ProjectInfo extends Component {
               <p>{project.description}</p>
               <div className="row justify-content-between">
                 <div className="project-tech col-md-8">
-                  <h3>Status</h3>
+                  <h3>Review Status</h3>
                   <p>{project.status}</p>
                 </div>
                 <div className="project-tech col-md-4">
-                  <h3>Stack</h3>
+                  <h3>Key</h3>
                   <ul>
                     {project.stack.map(item => {
                       return <li key={item}>{item}</li>;
                     })}
                   </ul>
-                  <h3>Github repo</h3>
+                  <h3>Movie IMDB</h3>
                   <a href={project.repoUrl}>{project.repoUrl}</a>
                 </div>
               </div>
@@ -169,7 +169,7 @@ class ProjectInfo extends Component {
               </div>
               {buttons}
             </div>
-            <Button label="Back to main" redirect={'/'}/>
+            <Button label="To Main" redirect={'/'}/>
           </div>
         </div>
       </div>
