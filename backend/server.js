@@ -16,7 +16,7 @@ require('dotenv').load();
 // passport.js contains the Passport auth strategies. Currently only GitHub
 require('./auth/passport')(passport);
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5000;
 
 // Connect to MongoDB database
 const mongoDB = process.env.MONGODB_URI;
