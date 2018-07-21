@@ -51,8 +51,10 @@ npm install
 npm start
 ```
 ### Should see
+```
 API running on port 5000
 MongoDB is connected
+```
 
 ## Go to frontend folder
 ### Open a terminal/cmd for frontend
