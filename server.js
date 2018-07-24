@@ -50,23 +50,19 @@ app.use(function(req, res, next) {
 });
 
 // Serve static assets
-app.use(express.static(path.resolve('build')));
+// app.use(express.static(path.resolve('build')));
+app.use(express.static(path.join(__dirname, "frontend", "build")));
 
 //  Connect all our routes to our application
 app.use('/', routes);
 
 // If request doesn't match api request always return the main index.html, so react-router render the route in the client
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve('build', 'index.html'));
-});
-
-// if (process.env.NODE_ENV === "production") {
-  // const path = require('path');
-app.use(express.static(path.join(__dirname, "frontend", "build")));
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve('build', 'index.html'));
+// });
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
 });
-// }
 
 app.listen(port, function() {
  console.log(`API running on port ${port}`);
