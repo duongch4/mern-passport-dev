@@ -51,7 +51,7 @@ app.use(function(req, res, next) {
 
 // Serve static assets
 // app.use(express.static(path.resolve('build')));
-app.use(express.static(path.join(__dirname, "frontend", "build")));
+app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 
 //  Connect all our routes to our application
 app.use('/', routes);
@@ -61,7 +61,7 @@ app.use('/', routes);
 //   res.sendFile(path.resolve('build', 'index.html'));
 // });
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
 });
 
 app.listen(port, function() {
