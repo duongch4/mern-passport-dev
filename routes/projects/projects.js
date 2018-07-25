@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Project = require('../../model/projects');
-const projectStatus = require("../../../frontend/src/js/projectStatus");
+const projectStatus = require("../../frontend/src/js/projectStatus");
 const setProjectObj = require('./projectHelpers.js');
 
 router.route('/')
