@@ -98,7 +98,7 @@ class Nav extends Component {
 
                     <Modal isOpen={this.state.showModal} toggle={this.toggleModal} className={this.props.className}>
                       <ModalHeader toggle={this.toggleModal}>
-                        Login/Signup
+                        Login/Register
                       </ModalHeader>
                       <ModalBody className="text-center">
                         <a href={window.location.origin + "/auth/github/"}>

@@ -122,7 +122,7 @@ class UserInfo extends Component {
                 <div className='row'>
                     <div className='col'>
                         {this.renderInfo(user, projects)}
-                        <Button label='Back to main' redirect='/'/>
+                        <Button label='To Main' redirect='/' />
                     </div>
                 </div>
             </div>

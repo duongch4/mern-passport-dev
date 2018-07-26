@@ -130,7 +130,7 @@ class UserEditNew extends Component {
                                     </fieldset>
                                 </form>
                             </div>
-                            <Button label='Back to main'/>
+                            <Button label='To Main' redirect='/' />
                         </div>
                     </div>
                 </div>

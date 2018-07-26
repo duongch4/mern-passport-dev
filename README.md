@@ -26,14 +26,14 @@
 
 ## Hook up a MongoDB: either locally or remotely
 
-## Go to backend folder
+## At root level, i.e. backend part
 ### Create .env file on the same level as server.js:
 ```
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/
 GITHUB_CLIENT_ID=<Supply dummy string if does not have>
 GITHUB_CLIENT_SECRET=<Supply dummy string if does not have>
-GITHUB_CALLBACK=http://127.0.0.1:3000/auth/github/callback
+GITHUB_CALLBACK=http://localhost:3000/auth/github/callback
 FACEBOOK_CLIENT_ID=<Supply dummy string if does not have>
 FACEBOOK_CLIENT_SECRET=<Supply dummy string if does not have>
 FACEBOOK_CALLBACK=http://127.0.0.1:3000/auth/facebook/callback
@@ -46,9 +46,9 @@ GOOGLE_CALLBACK=http://127.0.0.1:3000/auth/google/callback
 ```
 npm install
 ```
-### Run
+### Run: for development
 ```
-npm start
+npm run start-dev
 ```
 ### Should see
 ```
@@ -68,4 +68,20 @@ npm start
 ```
 Should open a browser automatically on http://localhost:3000
 
+### In frontend/package.json
+#### For development
+```
+  "proxy": {
+    "/auth": {
+      "target": "http://localhost:5000"
+    },
+    "/api": {
+      "target": "http://localhost:5000"
+    }
+  }
 
+```
+#### For deployment: Heroku
+```
+  "proxy": "http://localhost:5000"
+```
