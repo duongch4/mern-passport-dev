@@ -51,7 +51,7 @@ app.use(function(req, res, next) {
 
 // Serve static assets
 // app.use(express.static(path.resolve('build')));
-app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+app.use(express.static(path.join(__dirname, "frontend", "build")));
 
 //  Connect all our routes to our application
 app.use('/', routes);
