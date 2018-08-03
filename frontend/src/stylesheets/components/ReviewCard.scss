@@ -1,5 +1,5 @@
 @import "../base/helpers.scss";
-.project-cards-full {
+.review-cards-full {
     min-height: 100vh;
 }
 
@@ -14,9 +14,9 @@
 
 .card-category {
     text-transform: uppercase;
-    color: #9E9E9E;
-    font-size: 12px;
-    margin-bottom: 0.2em;
+    color: $dark-grey;
+    font-weight: $font-weight-regular;
+    font-size: 0.7em;
 }
 
 .follow-icon {

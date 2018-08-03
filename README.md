@@ -45,7 +45,7 @@ git clone https://github.com/duongch4/mern-project-dev
 ### Create .env file on the same level as server.js:
 ```
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/
+MONGODB_URI=mongodb://localhost:27017/<Supply your db name>
 GITHUB_CLIENT_ID=<Supply dummy string if does not have>
 GITHUB_CLIENT_SECRET=<Supply dummy string if does not have>
 GITHUB_CALLBACK=http://localhost:3000/auth/github/callback
