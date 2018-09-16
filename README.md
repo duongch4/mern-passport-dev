@@ -1,7 +1,10 @@
-# mern-passport-dev
+# Movie Review App
 
-* MERN stack
-* Divide backend and frontend separately, and use proxy to backend /api and /auth for development
+* MERN stack: A Movie Review App
+* Backend at root, frontend at a separate folder
+* Use proxy to backend /api and /auth for development
+* Local and Social Login/Signup
+* Users can browse movies [API from The Movie Database (TMDb)], write reviews, and follow others' reviews.
 
 # Some of the techs used:
 
@@ -26,15 +29,17 @@
 
 ## Hook up a MongoDB: either locally or remotely
 ### If run MongoDB locally
+
+#### Install MongoDB
+#### Make a local storage: say d:/mongodb/data
+#### Open one cmd/terminal (1st terminal)
 ```
-// Install MongoDB
-// Make a local storage: say d:/mongodb/data
-// Open one cmd (1st one)
 "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --dbpath="d:\mongodb\data"
+```
+#### Need to see this: [initandlisten] waiting for connections on port 27017
 
-// Need to see this: [initandlisten] waiting for connections on port 27017
-
-// Connect to MongoDB: open ANOTHER cmd (2nd one)
+#### Connect to MongoDB: open ANOTHER cmd/terminal (2nd terminal)
+```
 "C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe"
 ```
 ## Clone git repo
@@ -42,7 +47,7 @@
 git clone https://github.com/duongch4/mern-project-dev
 ```
 ## At root level, i.e. backend part
-### Create .env file on the same level as server.js:
+### Create a file named ".env" on the same level as "server.js":
 ```
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/<Supply your db name>
@@ -56,7 +61,7 @@ GOOGLE_CLIENT_ID=<Supply dummy string if does not have>
 GOOGLE_CLIENT_SECRET=<Supply dummy string if does not have>
 GOOGLE_CALLBACK=http://127.0.0.1:3000/auth/google/callback
 ```
-### Open a terminal/cmd for backend
+### Open a terminal/cmd for backend (3rd ternminal)
 ### Install dependencies
 ```
 npm install
@@ -72,7 +77,7 @@ MongoDB is connected
 ```
 
 ## Go to frontend folder
-### Open another terminal/cmd for frontend
+### Open another terminal/cmd for frontend (4th terminal)
 ### Install dependencies
 ```
 npm install
